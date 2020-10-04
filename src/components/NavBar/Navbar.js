@@ -8,9 +8,6 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
   backButton: {
     marginRight: theme.spacing(2),
   },
@@ -20,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Navbar(props){
-  const { title, handleTitle } = props
+export default function Navbar({title, handleTitle}){
+  
   const history = useHistory();
   const classes = useStyles();
 
-  function handleChange(user) {
+  function handleChange() {
     handleTitle();
     history.go(-1)
   }

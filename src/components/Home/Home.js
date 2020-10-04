@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function Home( { handleTitle } ) {
+export default function Home({handleTitle}) {
 
     function handleChange(user) {
         handleTitle();
@@ -34,7 +34,7 @@ export default function Home( { handleTitle } ) {
                 key={user} 
                 color="secondary" 
                 className={classes.button}
-                onClick={ ()=> handleChange(user)}
+                onClick={()=> handleChange(user)}
                 > {user}
             </Button>
              )}
