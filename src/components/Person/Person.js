@@ -20,7 +20,7 @@ export default function Person(props) {
         }
       }
       fetchData();
-    });
+    }, []);
 
     if(!userData) return <p>Loading</p> 
     
